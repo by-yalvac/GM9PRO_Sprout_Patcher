@@ -1,0 +1,25 @@
+From 1092377ce0674a926fd5f19c5d3d4c74627ef310 Mon Sep 17 00:00:00 2001
+From: trkzmn <trkzmn89@gmail.com>
+Date: Wed, 14 Oct 2020 10:00:01 +0000
+Subject: [PATCH 3/3] GM9PRO_sprout: Redefine wifi module path
+
+---
+ rootdir/etc/init.target.rc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/rootdir/etc/init.target.rc b/rootdir/etc/init.target.rc
+index fc816b8..d84a938 100644
+--- a/rootdir/etc/init.target.rc
++++ b/rootdir/etc/init.target.rc
+@@ -146,7 +146,7 @@ on boot
+     mkdir /data/vendor/camera 0770 camera camera
+ 
+ #Load WLAN driver
+-   insmod /vendor/lib/modules/qca_cld3_wlan.ko
++   insmod /vendor/etc/wifi/qca_cld3_wlan.ko
+ 
+ #DT2W
+     chown root system /sys/android_touch/wakeup_gesture_enable
+-- 
+2.32.0.windows.2
+

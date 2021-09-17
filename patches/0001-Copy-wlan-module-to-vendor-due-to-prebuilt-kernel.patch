@@ -1,0 +1,26 @@
+From 53718152ccca06214b67c7eb7ec9db2b75149eea Mon Sep 17 00:00:00 2001
+From: Mbtt107 <harddeath13@gmail.com>
+Date: Fri, 17 Sep 2021 14:08:48 +0300
+Subject: [PATCH] Copy wlan module to vendor due to prebuilt kernel
+
+Signed-off-by: Mbtt107 <harddeath13@gmail.com>
+---
+ device.mk             |   3 ++-
+ prebuilt/Image.gz-dtb | Bin 22511912 -> 0 bytes
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ delete mode 100644 prebuilt/Image.gz-dtb
+
+diff --git a/device.mk b/device.mk
+index 15283cf..47d5931 100644
+--- a/device.mk
++++ b/device.mk
+@@ -384,4 +384,5 @@ PRODUCT_PACKAGES += \
+ PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+-    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
++    $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
++    $(LOCAL_PATH)/prebuilt/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca_cld3_wlan.ko
+-- 
+2.32.0.windows.2
+
