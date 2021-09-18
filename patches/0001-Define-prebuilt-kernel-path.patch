@@ -1,0 +1,25 @@
+From 806e261f92d012553e50cfffe87017733c7d90c6 Mon Sep 17 00:00:00 2001
+From: Mbtt107 <harddeath13@gmail.com>
+Date: Sat, 18 Sep 2021 09:07:45 +0300
+Subject: [PATCH] Define prebuilt kernel path
+
+Signed-off-by: Mbtt107 <harddeath13@gmail.com>
+---
+ BoardConfig.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index 371f17e..b7f674c 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -81,6 +81,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
+ TARGET_FORCE_PREBUILT_KERNEL := true
+ TARGET_PRE_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+ PRODUCT_COPY_FILES += $(TARGET_PRE_KERNEL):Image.gz-dtb
++TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+ 
+ # Partitions
+ BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+-- 
+2.32.0.windows.2
+
