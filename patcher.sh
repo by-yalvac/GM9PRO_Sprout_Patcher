@@ -7,12 +7,12 @@
 cd ..
 
 echo "Applying OBB fix"
-#cd frameworks/native
-#git remote add hirqiz https://github.com/DevOtag-Open-Source/android_frameworks_native
-#git fetch hirqiz eleven
-#git cherry-pick 9465dde
+cd frameworks/native
+git remote add hirqiz https://github.com/DevOtag-Open-Source/android_frameworks_native
+git fetch hirqiz eleven
+git cherry-pick 9465dde
 
-#cd ../..
+cd ../..
 
 echo "Copying prebuilt files and patches"
 cp -r GM9PRO_Sprout_Patcher/prebuilt device/GM/GM9PRO_sprout/prebuilt
