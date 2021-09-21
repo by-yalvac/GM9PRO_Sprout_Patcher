@@ -21,11 +21,11 @@ cp -r GM9PRO_Sprout_Patcher/patches device/GM/GM9PRO_sprout/patches
 cd device/GM/GM9PRO_sprout
 
 echo "Applying patches"
-git apply patches/0001-Force-prebuilt.patch
-git apply patches/0002-GM9PRO_sprout-Add-prebuilt-kernel.patch
+#git apply patches/0001-Force-prebuilt.patch
+#git apply patches/0002-GM9PRO_sprout-Add-prebuilt-kernel.patch
 git apply patches/0003-GM9PRO_sprout-Redefine-wifi-module-path.patch
 git apply patches/0001-Copy-wlan-module-to-vendor-due-to-prebuilt-kernel.patch
-git apply patches/0001-Define-prebuilt-kernel-path.patch
+#git apply patches/0001-Define-prebuilt-kernel-path.patch
 
 echo "Exiting in 5 seconds."
 read -n 1 -t 5
